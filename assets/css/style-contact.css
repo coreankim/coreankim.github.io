@@ -1,0 +1,47 @@
+
+/* This is code exclusively for the contact page. */
+
+.contact-text {
+	float: left;
+	margin: 10px 0px 5px 0px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: #777777;
+}
+
+.contact-namebox {
+	float: left;
+	width: 615px;
+	padding: 10px 0px 10px 5px;
+	font-size: 0.9em;
+	border: solid 1px #999999;
+}
+
+.contact-emailbox {
+	float: left;
+	width: 615px;
+	padding: 10px 0px 10px 5px;
+	font-size: 0.9em;
+	border: solid 1px #999999;
+}
+
+.contact-messagebox {
+	float: left;
+	width: 615px;
+	height: 200px;
+	padding: 10px 0px 10px 5px;
+	margin-bottom: 15px;
+	font-size: 0.9em;
+	border: solid 1px #999999;
+}
+
+.contact-submit {
+	float: left;
+	width: 100px;
+	padding: 10px 0px 10px 0px;
+	background: #4aaaa5;
+	text-align: center;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: #ffffff;
+}
