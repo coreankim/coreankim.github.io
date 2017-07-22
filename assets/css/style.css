@@ -1,0 +1,260 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background-image: url("../images/concrete-texture.png")
+}
+
+a:link {
+	text-decoration: none; 
+	color: #777777; 
+}
+
+a:visited { 
+	color: #777777; 
+}
+
+a:hover { 
+	color: orange; 
+}
+
+/* This is code for the header */
+
+.header {
+	background: #ffffff;
+	height: 80px;
+	border-bottom: solid 2px #cccccc;
+}
+
+.navbar {
+	width: 960px;
+	margin: 0 auto;
+	background: #ffffff;
+}
+
+.navbar-name {
+	float: left;
+	padding: 25.5px 25.5px 25.5px 25.5px;
+	background: #4aaaa5;
+	text-align: center;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.navbar-links {
+	float: right;
+	width: 270px;
+	padding: 30px 0px 30px 0px;
+	text-align: center;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	color: #777777;
+}
+
+.navbar-about {
+	float: left;
+	width: 80px;
+	text-align: center;
+	margin-left: 12px;
+}
+
+.navbar-portfolio {
+	float: left;
+	width: 80px;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+	border-left: solid 0.5px #dddddd;
+	border-right: solid 0.5px #dddddd;
+}
+
+.navbar-contact {
+	float: left;
+	width: 80px;
+	text-align: center;
+	margin-right: 16px;
+	padding: 0px 0px 0px 0px;
+}
+
+/* This is code for the main contents, including 
+the about/portfolio/contact section and sidebar. */
+
+.container {
+	flex: 1 0 auto;
+	margin: 0 auto;
+	width: 960px;
+}
+
+.main {
+	float: left;
+	width: 620px;
+	margin: 30px 14px 30px 0px;
+	padding: 0px 20px 20px 20px;
+	background: #ffffff;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	color: #777777;
+	border: solid 0.5px #dddddd;
+}
+
+.main-header {
+	padding: 20px 0px 20px 0px;
+	margin: 0px 0px 20px 0px;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #4aaaa5;
+	border-bottom: solid 2px #dddddd;
+}
+
+.main-picture {
+	float: left;
+	width: 120px;
+	height: 180px;
+	margin: 0px 20px 0px 0px;
+}
+
+/* This is code exclusively for the Portfolio page. */
+
+.portfolio-leftcolumn {
+	position: relative;
+	float: left;
+	width: 290px;
+	height: 200px;
+	margin: 20px 19.9px 20px 0px;
+}
+
+.portfolio-rightcolumn {
+	position: relative;
+	float: left;
+	width: 290px;
+	height: 200px;
+	margin: 20px 0px 20px 19.9px;
+}
+
+.portfolio-img {
+	width:  290px;
+	height: 200px;
+}
+
+.portfolio-text {
+	float: top;
+	position: relative;
+	bottom: 60px;
+	width: 290px;
+	padding: 15px 0px 15px 0px;
+	background: #4aaaa5;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	color: #ffffff;
+	text-align: center;
+}
+
+/* This is code exclusively for the contact page. */
+
+.contact-text {
+	float: left;
+	margin: 10px 0px 5px 0px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: #777777;
+}
+
+.contact-namebox {
+	float: left;
+	width: 615px;
+	padding: 10px 0px 10px 5px;
+	font-size: 0.9em;
+	border: solid 1px #999999;
+}
+
+.contact-emailbox {
+	float: left;
+	width: 615px;
+	padding: 10px 0px 10px 5px;
+	font-size: 0.9em;
+	border: solid 1px #999999;
+}
+
+.contact-messagebox {
+	float: left;
+	width: 615px;
+	height: 200px;
+	padding: 10px 0px 10px 5px;
+	margin-bottom: 15px;
+	font-size: 0.9em;
+	border: solid 1px #999999;
+}
+
+.contact-submit {
+	float: left;
+	width: 100px;
+	padding: 10px 0px 10px 0px;
+	background: #4aaaa5;
+	text-align: center;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: #ffffff;
+}
+
+/* This is code for the sidebar. */
+
+.sidebar {
+	float: right;
+	width: 270px;
+	text-align: center;
+	background-color: #ffffff;
+	border: solid 0.5px #dddddd;
+	margin: 30px 0px 30px 10px;
+}
+
+.sidebar-header {
+	padding: 20px 0px 20px 0px;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #4aaaa5;
+}
+
+.sidebar-iconbox {
+	width: 200px;
+	padding: 20px 0px 20px 0px;
+	margin: 0 auto;
+	border-top: solid 1px #dddddd;
+}
+
+.sidebar-lefticon {
+	width: 60px;
+	height: 60px;
+	margin: 0px 2.5px 0px 0px;
+}
+
+.sidebar-middleicon {
+	width: 60px;
+	height: 60px;
+	margin: 0px 2.5px 0px 2.5px;
+}
+
+.sidebar-righticon {
+	width: 60px;
+	height: 60px;
+	margin: 0px 0px 0px 2.5px;
+}
+
+.footer {
+	display: table-row;
+	background: #666666;
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 0.8em;
+	color: #999999;
+	border-top: solid 5px #4aaaa5;
+}
