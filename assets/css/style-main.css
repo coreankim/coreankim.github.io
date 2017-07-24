@@ -118,6 +118,7 @@ the about/portfolio/contact section and sidebar. */
 	float: left;
 	width: 120px;
 	height: 180px;
+	margin: 0px 20px 0px 0px;
 }
 
 /* This is code for the sidebar. */
