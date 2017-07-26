@@ -1,0 +1,106 @@
+html,body {
+	height: 100%;
+	background-image: url("../images/concrete-texture.png")
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+a:link {
+	text-decoration: none; 
+	color: #777777; 
+}
+
+a:visited { 
+	color: #777777; 
+}
+
+a:hover { 
+	color: orange; 
+}
+
+/* Modifications to Bootstrap navbar CSS */
+
+.container {
+	flex: 1 0 auto;
+	position: relative;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.navbar {
+	background: #ffffff;
+	border-bottom: 2px solid #cccccc;
+}
+
+.navbar-brand {
+	background: #4aaaa5;
+	font-size:  1.8em;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	color: #ffffff;
+}
+
+.navbar-link {
+	float: left;
+}
+
+/* Code for the main section and sidebar */
+
+.header-text {
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #4aaaa5;
+}
+
+.main-picture {
+	float: left;
+	width: 120px;
+	height: 180px;
+	margin: 5px 10px 0px 0px;
+}
+
+.main-paragraph {
+	line-height: 150%;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	color: #777777;
+}
+
+.sidebar-icon {
+	width: 90px;
+}
+
+/* This is code exclusively for the Portfolio page. */
+
+.portfolio-box {
+	position: relative;
+	margin: 2%;
+}
+
+.portfolio-img {
+	width: 100%;
+}
+
+.portfolio-text {
+	position: absolute;
+	width: 100%;
+	bottom: 7%;
+	padding: 4% 0px 4% 0px;
+	background: #4aaaa5;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	color: #ffffff;
+	text-align: center;
+}
+
+/* This is code for the Footer */
+
+.footer {
+	background: #666666;
+	padding: 20px 0px 20px 0px;
+	margin-top: 20px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 0.8em;
+	color: #999999;
+	border-top: solid 5px #4aaaa5;
+}

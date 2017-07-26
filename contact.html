@@ -1,48 +1,85 @@
 <!doctype html>
 <html>
+
 <head>
-	<title>Contact</title>
+	<title>Bootstrap Contact</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style-main.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style-portfolio.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style-contact.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/response-contact.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/response.css">
 </head>
 
 <body> 
-		<header class="clearfix header">
-		<div class="navbar">
-			<div class="navbar-name">Chang-Yeon Kim</div>
-			<div class="navbar-links">
-				<div class="navbar-about"><a href="index.html">About</a></div>
-				<div class="navbar-portfolio"><a href="portfolio.html">Portfolio</a></div>
-				<div class="navbar-contact"><a href="contact.html">Contact</a></div>
+	<header>
+		<nav class="navbar navbar-static-top">
+			<div class="container">
+				<div class="navbar-brand text-center">Chang-Yeon Kim</div>
+				<div class="navbar-linkbox pull-right">
+					<div class="navbar-link navbar-text text-center"><a href="index.html">About</a></div>
+					<div class="navbar-link navbar-text text-center"><a href="portfolio.html">Portfolio</a></div>
+					<div class="navbar-link navbar-text text-center"><a href="contact.html">Contact</a></div>
+				</div>
 			</div>
-		</div>
+		</nav>
 	</header>
-	<div class="clearfix container">
-		<div class="main">
-			<div class="main-header">Contact</div>
-			<div class="contact-text">Name</div>
-			<div class="contact-namebox">John Smith</div>
-			<div class="contact-text">Email</div>
-			<div class="contact-emailbox">example@gmail.com</div>
-			<div class="contact-text">Message</div>
-			<div class="contact-messagebox">Enter message here.</div>
-			<div class="contact-submit">Submit</div>
-		</div>
-		<div class="sidebar">
-			<div class="sidebar-header">Connect with Me</div>
-			<div class="sidebar-iconbox">
-				<a href="https://github.com/coreankim" target="_blank"><img class="sidebar-lefticon" src="assets/images/github.png" alt="gitlab"></a>
-				<a href="https://www.linkedin.com/in/chang-yeon-kim-511096109/" target="_blank"><img class="sidebar-middleicon" src="assets/images/linkedin.png"></a>
-				<a href="https://stackoverflow.com/users/8276736/chang-yeon-kim" target="_blank"><img class="sidebar-righticon" src="assets/images/stackoverflow.png"></a>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="header-text">About Me</div>
+					</div>
+					<div class="panel-body">
+						<form>	
+						<div class="form-group">
+		    				<label for="inputdefault">Name</label>
+		    				<input class="form-control" id="inputdefault" type="text" placeholder="Enter your text">
+		  				</div>
+					   	<div class="form-group">
+		    				<label for="inputdefault">Email</label>
+		    				<input class="form-control" id="inputdefault" type="text" placeholder="Enter your email">
+		    			</div>
+		  				<div class="form-group">
+		    				<label for="inputdefault">Message</label>
+		    				<textarea class="form-control" rows="9" id="comment" placeholder="Entere your message"></textarea>
+		  				</div>
+						</form>
+						<button type="button" class="btn btn-info">Submit</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading text-center">
+						<div class="header-text">Connect with Me</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-xs-4 col-md-4">
+								<a href="https://github.com/coreankim" target="_blank"><img src="assets/images/github.png" class="sidebar-icon img-responsive center-block" alt="gitlab"></a>
+							</div>
+							<div class="col-xs-4 col-md-4">
+								<a href="https://www.linkedin.com/in/chang-yeon-kim-511096109/" target="_blank"><img src="assets/images/linkedin.png" class="sidebar-icon img-responsive center-block" alt="gitlab"></a>
+							</div>
+							<div class="col-xs-4 col-md-4">
+								<a href="https://stackoverflow.com/users/8276736/chang-yeon-kim" target="_blank"><img src="assets/images/stackoverflow.png" class="sidebar-icon img-responsive center-block" alt="gitlab"></a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	
-	<footer class="clearfix footer">&copy; Copyright 2017 Chang-Yeon Kim</footer>
+  	<footer class="footer text-center">
+    	<div class="container">
+        	<p>&copy; Copyright 2017 Chang-Yeon Kim</p>
+     	</div>
+    </footer>
 </body>
+
 </html>
 

@@ -1,0 +1,16 @@
+@media screen and (max-width: 767px) {
+
+/* Code to modify the navbar brand and links to span the entire width of the page in smaller screens. */	
+  	.navbar-brand {
+  		width: 100%;
+  	}   	
+
+   .navbar-linkbox {
+  		width: 100%;
+  	}
+	
+	.navbar-link {
+		width: 33.2%;
+	}
+
+}
