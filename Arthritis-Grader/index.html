@@ -1,0 +1,56 @@
+<!doctype html>
+
+<head>
+	<title>Hamann-Todd Arthritis Grader</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="assets/javascript/questions.js"></script>
+	<script src="assets/javascript/javascript.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="container text-center">
+			<div class="jumbotron">
+				<h3>Hamann-Todd Arthritis Grader</h3>
+				<br>
+				<button class="btn btn-default" id="start-button">Start</button>
+				<button class="btn btn-default" id="reset-button">Reset</button>
+				<br><br>
+				<div class="" id=current-grade><h3>Current arthritis grade: 0</h3></div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="container hidden" id="arthritis-grader">
+		<div class="row text-center" id="question-row">
+			<div class="" id="question"></div>
+			<br>
+			<div id="options">
+				<label class="radio-inline"><input type="radio" name="optradio" id="no-button">No</label>
+				<label class="radio-inline"><input type="radio" name="optradio" id="yes-button">Yes</label>
+				<br><br>
+				<button type="button" class="btn btn-default" id="next-button">Next</button>
+				<br>
+			</div>
+		</div>
+		<br>
+		<div class="row text-center" id="picture-row">
+			<div class="col-md-4 text-center">
+				<img src="" class="img-responsive" id="image0">
+			</div>
+			<div class="col-md-4 text-center">
+				<img src="" class="img-responsive" id="image1">
+			</div>
+			<div class="col-md-4 text-center">
+				<img src="" class="img-responsive" id="image2">
+			</div>
+		</div>
+		<br>
+	</div>
+
+</body>
+</html>
