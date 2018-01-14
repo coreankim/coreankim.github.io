@@ -207,6 +207,7 @@ $("#predict_btn").click(function() {
         success: function(data) {
             var output = data.result*100;
             output = round(output,1);
+            $('#results').remove('<h4>Mortality risk: '+output + '%</h4>');
             $('#results').append('<h4>Mortality risk: '+output + '%</h4>');
             $(cursorDivRow).remove();            
         },
