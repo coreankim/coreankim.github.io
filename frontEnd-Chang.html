@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link href="assets/css/style-Chang.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="calculator">
+        
+        <br>
+        <h2>Mortality Risk Predictor after Spinal Epidural Abscess</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <hr>
+                <div class="alert alert-info" role="alert">
+                    <!-- <h3 id="complication_stat"></h3>
+                    <h3 id="confidence"></h3> -->
+                    <h4>Demographic Information</h4>
+                    <br>
+                    <div class="form-group row">
+                        <label for="age" class="col-sm-4 col-form-label"><h6>Age:</h6></label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="age" min="18" max="100" placeholder="Enter Age">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label"><h6>Sex:</h6></label>
+                        <div class="col-sm-8">
+                            <select class="custom-select col-sm-8" id="sex" placeholder="Enter Sex">
+                                <option value = "0" name="gender" class="gender">Male</option>
+                                <option value="1" name="gender" class="gender">Female</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label" placeholder="Enter Race"><h6>Race:</h6></label>
+                        <div class="col-sm-8">
+                            <select class="Race custom-select col-sm-8">
+                                <option value="0">White</option>
+                                <option value="1">Black</option>
+                                <option value="2">Hispanic</option>
+                                <option value="3">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label"><h6>Primary payer:</h6></label>
+                        <div class="col-sm-8">
+                            <select class="PAY1 custom-select col-sm-8">
+                                <option value="0">Medicare</option>
+                                <option value="1">Medicaid</option>
+                                <option value="2">Private insurance</option>
+                                <option value="3">Other</option>
+                            </select>
+                        </div>
+                    </div>    
+                    
+                    <br>
+                    <h4>Hospital Information</h4>
+                    <br>
+
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-4 col-form-label"><h6>Hospital size:</h6></label>
+                        <div class="col-sm-8">
+                            <select class="HOSP_BEDSIZE custom-select col-sm-8">
+                                <option value="0">Small</option>
+                                <option value="1">Medium</option>
+                                <option value="2">Large</option>        
+                            </select>
+                        </div>
+                    </div>    
+                    
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-4 col-form-label"><h6>Hospital location:</h6></label>
+                        <div class="col-sm-8">
+                            <select class="Hosp_locteach custom-select col-sm-8">
+                                <option value="0">Rural</option>
+                                <option value="1">Urban non-teaching</option>
+                                <option value="2">Urban teaching</option>        
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+                <button type="button" class="btn btn-outline-warning" id="predict_btn">Predict</button>
+                <span class="label label-default float-right" id="results"></span>
+            </div>  
+
+            <div class="col-md-6">
+                <hr>
+                <table class="table">
+                    <thead class="thead-dark">
+                    </thead>
+
+                    <tbody id="v_list">
+                        <input type="text" class="form-control d-inline" id="add_variable" autocomplete="off" placeholder="Enter ICD-9 diagnosis code" style="width:80%">
+                        <button id="add" class="btn btn-primary float-right">Add</button>
+                        <br>
+                        <br>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="spinner-row"></div>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/javascript/ICD9.js"></script>
+<script type="text/javascript" src="assets/javascript/javascript-Chang.js"></script>
+
+</body>
+   
+</html>
