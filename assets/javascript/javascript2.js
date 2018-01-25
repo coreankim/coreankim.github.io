@@ -19,7 +19,7 @@ $(document).ready(function() {
     inputObject["endYear"] = $("#end-year-input").val().trim();
     inputObject["numResults"] = $("#num-results-input").val().trim();
 
-    var eSearchURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term="+inputObject["journalName"]+"[ta]&mindate="+inputObject["startYear"]+"&maxdate="+inputObject["endYear"]+"&retmax="+inputObject["numResults"]+"&retmode=json";
+    var eSearchURL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term="+inputObject["journalName"]+"[ta]&mindate="+inputObject["startYear"]+"&maxdate="+inputObject["endYear"]+"&retmax="+inputObject["numResults"]+"&retmode=json";
 
     $.getJSON(eSearchURL, function(data) {
       var ids = data.esearchresult.idlist;
