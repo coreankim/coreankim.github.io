@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pubmed Search</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-brand ">Pubmed Abstract Retriever</div>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4">
+          <div class="list-group">
+            <h3 class="my-4">Enter search terms</h3>
+            <div class="list-group-item">
+              <div class="form-group">
+                <label for="journal-name">Journal name:</label>
+                <select class="form-control" id="journal-name" placeholder="Pick journal name">
+                  <option value="J Bone Joint Surg Am">J Bone Joint Surg Am</option>
+                  <option value="Clin Orthop Relat Res">CORR</option>
+                  <option value="J Assoc Res Otolaryngol">J Assoc Res Otolaryngol</option>
+                  <option value="Plast Reconstr Surg">Plast Reconstr Surg</option>
+                  <option value="Annals of Surgery">Annals of Surgery</option>
+                  <option value="Ann Intern Med">Ann Intern Med</option>
+                  <option value="JAMA">JAMA</option>
+                  <option value="N Engl J Med">N Engl J Med</option>
+                  <option value="J Pediatr Orthop">J Pediatr Orthop</option>
+                  <option value="J Child Orthop">J Child Orthop</option>
+                  <option value="J Pediatr Orthop B">J Pediatr Orthop B</option>
+                  <option value="Spine J">Spine J</option>
+                  <option value="J Orthop Trauma">J Orthop Trauma</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="list-group-item">
+              <div class="form-group">
+                <label for="start-year-input">Starting year:</label>
+                <input type="text" class="form-control" id="start-year-input">
+              </div>
+            </div>
+
+            <div class="list-group-item">
+              <div class="form-group">
+                <label for="end-year-input">Ending year:</label>
+                <input type="text" class="form-control" id="end-year-input">
+              </div>
+            </div>
+
+            <div class="list-group-item">
+              <div class="form-group">
+                <label for="num-results-input">Number of results (max 1000):</label>
+                <input type="text" class="form-control" id="num-results-input">
+              </div>
+            </div>
+            
+            <br>
+            <button type="button" class="btn btn-default" id="search">Search</button>
+            <button type="button" class="btn btn-default" id="getCsv">Get CSV!</button>
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <br>
+          <span id="msg-success"></span> 
+        </div>
+
+      </div>
+      <!-- /.row -->
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script> -->
+<script src="assets/javascript/javascript2.js"></script>
+<script src="assets/javascript/JSON-handlers.js"></script>
+<script src="assets/javascript/article-info-grabbers5.js"></script>
+<script src="assets/javascript/study-evaluation.js"></script>
+<script src="assets/javascript/study-evaluation-algorithm.js"></script>
+<script src="assets/javascript/genderize.js"></script>
+<script src="assets/javascript/namesAndGenders.js"></script>
+</body>
+</html>
