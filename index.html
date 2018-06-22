@@ -20,12 +20,13 @@
       </div>
     </nav>
     <!-- Page Content -->
+
     <div class="container">
       <div class="row">
 
         <div class="col-lg-4">
           <div class="list-group">
-            <h3 class="my-4">Enter search terms</h3>
+            <h3 class="my-4">Enter search terms (Please limit search to under 400 at a time!) </h3>
             <div class="list-group-item">
               <div class="form-group">
                 <label for="journal-name">Journal name:</label>
@@ -43,20 +44,25 @@
                   <option value="J Pediatr Orthop B">J Pediatr Orthop B</option>
                   <option value="Spine J">Spine J</option>
                   <option value="J Orthop Trauma">J Orthop Trauma</option>
+                  <option value="Am J Sports Med">Am J Sports Med</option>
+                  <option value="J Shoulder Elbow Surg">J Shoulder Elbow Surg</option>
+                  <option value="Arthroscopy">Arthroscopy</option>
+                  <option value="Sports Health">Sports Health</option>
+
                 </select>
               </div>
             </div>
 
             <div class="list-group-item">
               <div class="form-group">
-                <label for="start-year-input">Starting year:</label>
+                <label for="start-year-input">Starting date (YYYY/MM/DD):</label>
                 <input type="text" class="form-control" id="start-year-input">
               </div>
             </div>
 
             <div class="list-group-item">
               <div class="form-group">
-                <label for="end-year-input">Ending year:</label>
+                <label for="end-year-input">Ending date:</label>
                 <input type="text" class="form-control" id="end-year-input">
               </div>
             </div>
@@ -69,8 +75,8 @@
             </div>
             
             <br>
-            <button type="button" class="btn btn-default" id="search">Search</button>
-            <button type="button" class="btn btn-default" id="getCsv">Get CSV!</button>
+            <h2><span class="label label-primary" id="search">Search</span></h2>
+            <h2><span class="label label-primary" id="getCsv">Get CSV!</span></h2>
           </div>
         </div>
 
@@ -83,15 +89,16 @@
       <!-- /.row -->
     </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script> -->
-<script src="assets/javascript/javascript2.js"></script>
+<script src="assets/javascript/javascript3.js"></script>
 <script src="assets/javascript/JSON-handlers.js"></script>
 <script src="assets/javascript/article-info-grabbers5.js"></script>
 <script src="assets/javascript/study-evaluation.js"></script>
 <script src="assets/javascript/study-evaluation-algorithm.js"></script>
-<script src="assets/javascript/genderize.js"></script>
+<!-- <script src="assets/javascript/genderize.js"></script>
+<script src="assets/javascript/namesAndGenders.js"></script> -->
 </body>
 </html>
