@@ -55,9 +55,9 @@ $(document).ready(function() {
           // abstractObj["UID"+articlePMID]["First Author Gender"] = genders[0];
           abstractObj["UID"+articlePMID]["First Author Full Name"] = authorInfo["firstAuthorFullName"];          
           abstractObj["UID"+articlePMID]["First Author Affiliation"] = authorInfo["firstAuthorAffiliation"];
-          // abstractObj["UID"+articlePMID]["First Author Country"] = authorInfo["firstAuthorCountry"];
-          // abstractObj["UID"+articlePMID]["First Author Department"] = authorInfo["firstAuthorDepartment"];
-          // abstractObj["UID"+articlePMID]["First Author State"] = authorInfo["firstAuthorState"];
+          abstractObj["UID"+articlePMID]["First Author Country"] = authorInfo["firstAuthorCountry"];
+          abstractObj["UID"+articlePMID]["First Author Department"] = authorInfo["firstAuthorDepartment"];
+          abstractObj["UID"+articlePMID]["First Author State"] = authorInfo["firstAuthorState"];
           abstractObj["UID"+articlePMID]["Last Author First Name"] = authorInfo["lastAuthorFirstName"];
           // abstractObj["UID"+articlePMID]["Last Author Gender"] = genders[1];
           abstractObj["UID"+articlePMID]["Last Author Full Name"] = authorInfo["lastAuthorFullName"];
@@ -70,8 +70,8 @@ $(document).ready(function() {
           var evaluationInfo = evaluateStudy(abstractObj["UID"+articlePMID]);
           abstractObj["UID"+articlePMID]["Abstract"] = abstractInfo["string"];
           abstractObj["UID"+articlePMID]["Final study type"] = evaluationInfo["studyType"];
-          // abstractObj["UID"+articlePMID]["Official LOE"] = abstractInfo.LOE; 
-          // abstractObj["UID"+articlePMID]["Level of evidence"] = evaluationInfo.evidenceLevel;
+          abstractObj["UID"+articlePMID]["Official LOE"] = abstractInfo.LOE; 
+          abstractObj["UID"+articlePMID]["Level of evidence"] = evaluationInfo.evidenceLevel;
         };
 
         var abstractArray = [];

@@ -16,13 +16,49 @@ var titleGrabber = function(articleObj, hasTitle) {
 	return title;
 };
 
-var yearGrabber = function(articleObj, hasYear) {
-	
-	var year = 0;
+var articleIDGrabber = function(articleIDList, hasPII, hasDOI) {
 
-	for (var x in articleObj) {
-	    if (x === "DateCompleted") {
-			year = articleObj["DateCompleted"]["Year"];
+	console.log(articleIDList)
+	var idObj = {
+		"DOI": "",
+		"PII": ""
+	}
+
+	for (var i = 0; i < articleIDList.length; i++) {
+	    if (articleIDList[i]["@attributes"]["IdType"] === "doi") {
+	    	idObj["DOI"] = articleIDList[i]["#text"]
+	 		hasDOI = true;
+	    };
+	    if (articleIDList[i]["@attributes"]["IdType"] === "pii") {
+	    	idObj["PII"] = articleIDList[i]["#text"]
+	 		hasPII = true;
+	    };
+	}; 
+
+	if (hasDOI === false) {
+		idObj["DOI"] = "N/A";
+	};
+
+	if (hasPII === false) {
+		idObj["PII"] = "N/A";
+	};
+
+	return idObj;  
+}
+
+var yearGrabber = function(articleObj, initialYear, hasYear) {
+	
+	var dateObject = {
+		"year": initialYear,
+		"month": "MM",
+		"day": "DD"
+	}
+
+	for (var x in articleObj["Article"]) {
+	    if (x === "ArticleDate") {
+			dateObject["year"] = articleObj["Article"]["ArticleDate"]["Year"];
+			dateObject["month"] = articleObj["Article"]["ArticleDate"]["Month"];
+			dateObject["day"] = articleObj["Article"]["ArticleDate"]["Day"];
 			hasYear = true;
 	    };
   	};
@@ -31,8 +67,25 @@ var yearGrabber = function(articleObj, hasYear) {
 		year = "No year";
 	};  
 
-  return year;
+  	return dateObject;
 };
+
+var paginationGrabber = function(articleObj, hasPage) {
+
+	var pagination = "N/A";
+	for (var x in articleObj["Article"]) {
+	    if (x === "Pagination") {
+			pagination = articleObj["Article"]["Pagination"]["MedlinePgn"];
+			hasPage = true;
+	    };
+  	};
+    
+	if (hasPage === false) {
+		pagination = "No pagination";
+	};  
+
+	 return pagination;
+}
 
 function authorGrabber(articleObj, hasAuthor) {
 
@@ -193,8 +246,8 @@ var abstractGrabber = function(articleObj, hasAbstract) {
       
     	if (typeof(articleObj.Article.Abstract.AbstractText) === "string") {
     	
-	      var tempAbstractString = articleObj.Article.Abstract.AbstractText;
-        var abstractCharArray = tempAbstractString.split(""); 
+		    var tempAbstractString = articleObj.Article.Abstract.AbstractText;
+	        var abstractCharArray = tempAbstractString.split(""); 
         for (i = 0; i < (abstractCharArray.length-1); i++) {
         	if (abstractCharArray[i] === ".") {
         		if (abstractCharArray[i+1].charCodeAt(0) < 32 || abstractCharArray[i+1].charCodeAt(0) > 126) {
@@ -221,24 +274,6 @@ var abstractGrabber = function(articleObj, hasAbstract) {
         		};
         		if (z === "#text") {
         			var sectionContent = articleObj.Article.Abstract.AbstractText[k][z];
-        			if (sectionHead.toLowerCase().includes("level of evidence")) {
-        				if (sectionContent.toLowerCase().includes(" i")) {
-        					abstract.LOE = "1";
-        				};
-        				if (sectionContent.toLowerCase().includes(" ii")) {
-        					abstract.LOE = "2";
-        				};
-        				if (sectionContent.toLowerCase().includes(" iii")) {
-        					abstract.LOE = "3";
-        				};
-        				if (sectionContent.toLowerCase().includes(" iv")) {
-        					abstract.LOE = "4";
-        				};
-        				if (sectionContent.toLowerCase().includes(" v")) {
-        					abstract.LOE = "5";
-        				};
-        				sectionContent = "";	
-        			};
         		};
       		};
       		abstractArray.push(sectionHead+": "+sectionContent);

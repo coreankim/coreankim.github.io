@@ -212,7 +212,7 @@ var thirdPass = function (titleConverted, meshConverted, pubTypeConverted, abstr
 		  	evaluation.studyType = "retrospective cohort study";
 		    evaluation.evidenceLevel = "3";
 		  } else if (abstractStringConverted.includes("comparison") || abstractStringConverted.includes("group") || abstractStringConverted.includes("compare") || titleConverted.includes("comparison")) {
-				evaluation.studyType = "retrospective cohort study";
+			evaluation.studyType = "retrospective cohort study";
 		    evaluation.evidenceLevel = "3";
 			} else {
 		  	evaluation.studyType = "retrospective study w/ no cohort comparison";
@@ -245,7 +245,7 @@ var thirdPass = function (titleConverted, meshConverted, pubTypeConverted, abstr
 		  	evaluation.studyType = "prospective cohort study";
 		    evaluation.evidenceLevel = "2";
 		  } else if (abstractStringConverted.includes("comparison") || abstractStringConverted.includes("group") || abstractStringConverted.includes("compare") || titleConverted.includes("comparison")) {
-				evaluation.studyType = "prospective cohort study";
+			evaluation.studyType = "prospective cohort study";
 		    evaluation.evidenceLevel = "2";
 		  } else if (abstractStringConverted.includes("single cohort")) {
 		  	evaluation.studyType = "prospective outcome study w/ single cohort";
