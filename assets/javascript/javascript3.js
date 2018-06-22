@@ -11,6 +11,8 @@ $(document).ready(function() {
   $("#search").on("click", function showResults(event) {  
 
     event.preventDefault();
+     $("#msg-success").html("<h2>Compiling search...</h2>") 
+
 
     var exportedDataObj = {};
 
@@ -77,7 +79,7 @@ $(document).ready(function() {
           abstractArray.push(abstractObj[x]);
         };
         console.log(abstractArray)
-        $("#msg-success").append("<h2><p>Articles successfully retrieved! Click 'Get CSV!</p><p>(don't click on the text - click the colored space around the text) to download results.</p>")
+        $("#msg-success").append("<h2><p>Articles successfully retrieved! Click 'Get CSV!'' to download results in CSV form.</p><p>To view data, in Excel click Data --> From Text, then type in @ for the delimiter.</p>")
         $("#getCsv").on("click", function(event) {
           JSONToCSVConvertor(abstractArray, "abstracts", true)
         });
